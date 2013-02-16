@@ -1,60 +1,39 @@
 \name{conexion.apicultur}
 \alias{conexion.apicultur}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Creates a connexion to the apicultur API
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function creates a connexion to the apicultur API hiding the authorization code required to use it.
 }
 \usage{
-conexion.apicultur(auth.code)
+conexion.apicultur(auth.code = NA, file = NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{auth.code}{
-%%     ~~Describe \code{auth.code} here~~
+  \item{auth.code}{character string providing the authorization code for using the API (see the details section below)}
+  \item{file}{path to a file containing the authorization code}
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+\details{The apicultur set of APIs provided by Molino de Ideas require registration for access. 
+Free and non-free accounts are available (see \url{http://www.apicultur.com/}).
+Upon registration, an authorization code will be provided by Molino de Ideas. 
+This code can be passed to this function prior to making calls to the APIs using other functions in the package by either passing it as a character string or storing it in a file and providing its path.}
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
+A connection string required by other functions for accessing the apicultur APIs.
 }
 \author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+Carlos J. Gil Bellosta
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+  \dontrun{
 
-## The function is currently defined as
-function (auth.code) 
-{
-    tmp <- auth.code
-    class(tmp) <- "apicultur"
-    tmp
+apicultur <- conexion.apicultur("8FRk...oa")
+lematiza(apicultur, "casas")
+
   }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ misc }
+

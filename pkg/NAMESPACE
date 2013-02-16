@@ -1,5 +1,5 @@
 # exportPattern("^[[:alpha:]]+")
 
-export(conexon.apicultur)
+export(conexion.apicultur)
 export(lematiza)
 
