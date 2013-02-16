@@ -1,9 +1,11 @@
 Package: apicultuR
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: A wrapper to the apicultuR set of APIs for NLP in Spanish
+Version: 0.01
 Date: 2013-02-16
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: c(person("Carlos J.", "Gil Bellosta", role = c("aut", "cre"),
+                          email = "cgb@datanalytics.com"))
+Depends: R (>= 2.14), RCurl, RJSONIO
+Description: A set of functions interacting with apicultur, a group of APIs provided by Molino de Ideas. They provide high quality tools for processing natural language in Spanish (stemmers, etc.).
+URL: http://apicultur.r-forge.r-project.org/, http://www.apicultur.com/
+License: GPL (>= 2)
